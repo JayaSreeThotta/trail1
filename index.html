@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottom-to-Top Motion</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  h1, p {
+    color: #666;
+    opacity: 1;
+    margin-bottom: 40px;
+    animation: none; /* Remove animation initially */
+  }
+
+  @keyframes bottomToTop {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a bottom-to-top motion effect applied to this paragraph.</p>
+    
+    <!-- Add more headings and paragraphs here -->
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('h1, p');
+      elements.forEach(element => {
+        if (isElementInViewport(element) && !element.classList.contains('animated')) {
+          element.classList.add('animated');
+          element.style.animation = 'bottomToTop 1s ease-out';
+        }
+      });
+    });
+
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  </script>
+</body>
+</html>
